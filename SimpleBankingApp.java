@@ -60,8 +60,8 @@ class Bank {
         System.out.println("Enter balance: ");
         double balance = scanner.nextDouble();
         
-        if(balance < 0){
-            System.out.println("Balance cannot be negative");
+        if(balance < 100){
+            System.out.println("To make a new account, your balance cannot be less than 100");
             accountNumber--;
             return;
         }
@@ -152,7 +152,7 @@ class Bank {
                     return;
                 }
                 double balance = account.getBalance();
-                if(balance < amount){
+                if(balance-50 < amount){
                     System.out.println("Insufficient balance");
                     return;
                 }
